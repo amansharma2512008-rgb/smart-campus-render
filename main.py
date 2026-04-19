@@ -2,8 +2,10 @@ import os
 import psycopg2
 from psycopg2.extras import RealDictCursor
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # --- PASTE YOUR NEW NEON DATABASE LINK HERE ---
 NEON_URL = "postgresql://neondb_owner:npg_XHS5oqa7jGiv@ep-muddy-wave-amdry2e1-pooler.c-5.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"

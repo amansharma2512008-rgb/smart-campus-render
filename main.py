@@ -62,7 +62,7 @@ def get_data():
     try:
         conn = get_db_connection()
         cursor = conn.cursor(cursor_factory=RealDictCursor)
-        cursor.execute("SELECT * FROM telemetry ORDER BY id DESC LIMIT 50")
+        cursor.execute("SELECT * FROM telemetry ORDER BY id DESC LIMIT 5000")
         rows = cursor.fetchall()
         cursor.close()
         conn.close()
